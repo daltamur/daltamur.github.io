@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aboutt</title>
+	 <link rel="stylesheet" id="curCSS" href="sitewideCSS/initial.css"> 
+</head>
+<body>
+ <div class="topnav">
+ 		<a href="index.html">Home</a>
+        <a href="google.com">Resume</a>
+        <a href="google.com">Blog</a>
+        <a href="aboutPage.html">About</a>
+        <input id="searchBar" type="text" placeholder="Search...">
+    </div>
+
+<script type="text/javascript">
+        var input = document.getElementById("searchBar");
+        input.addEventListener("keyup", function(event) {
+        var inputString=document.getElementById("searchBar").value.toLowerCase();
+        // Searches for the enter button
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // go to different pages depending on what is pressed
+       if(inputString=='content'){
+        window.location.replace("aboutPage.html");
+            }else if(inputString=='gamer mode'){
+               /*document.querySelector("link[href='sitewideCSS/initial.css']").href = "sitewideCSS/gamerMode.css";*/
+                document.getElementById('curCSS').href=="sitewideCSS/gamerMode.css";
+                document.getElementById('curCSS').setAttribute('href',"sitewideCSS/gamerMode.css")
+            }else if(inputString=='gamer mode exit'){
+                 document.getElementById('curCSS').href=="sitewideCSS/initial.css";
+                document.getElementById('curCSS').setAttribute('href',"sitewideCSS/initial.css")
+            }else{
+                window.location.replace("errorPage.html");
+            }
+        }
+    });
+
+
+    </script>
+</body>
+</html>
