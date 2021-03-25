@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" id="curCSS" href="../sitewideCSS/initial.css">
+     <link rel="icon" href="siteWideCSS/favicon.png"> 
+	<title>Blog-Forest for the Tries</title>
+</head>
+<body>
+	<div class="topnav">
+ 		<a href="../index.html">Home</a>
+        <a href="google.com">Resume</a>
+        <a href="index.html" onkeydown="searchFunction()">Blog</a>
+        <a href="aboutPage.html">About</a>
+        <input id="searchBar" type="text" placeholder="Search...">
+    </div>
+
+    <div class="title"><h1>The Forest for the Tries</h1></div>
+    <div class="blogBody">
+    	<div class="blogBodyText"><p>&emsp;&emsp;&emsp;Recursion has always been the subject that slips away from beginners in computer science. The idea of doing the same process over and over again, but the idea of doing that on a case-basis is daunting at first. After taking my Data Structures & Algorithms course, I became fairly comfortable with recursion, but it is always the main thing the students I tutor struggle with. After being tasked to make an autofill program, I think the idea of trie structures could aid in recursion comprehension.
+    	</p></div>
+    	<div class="blogBodyText"><p>&emsp;&emsp;&emsp;First, let's talk about what a trie is in my specific case. What I did was take in a bunch of files from a user-given directory, sort them alphabetically and then put them in a trie structure where words are linked based on the letters they share. for instance, the words "fish" and "finish" share the first two letters "F" & "I" and so they'll be linked and branch off of eachother. Take this image, for example.
+    	</p></div>
+    	<div class="bodyImage"><img src="trie.png" /></div>
+    	<div class="bodyImageText"><p>Think of a trie as all the possible paths you can make when writing a word letter-by-letter.</p></div>
+    	<div class="blogBodyText"><p>&emsp;&emsp;&emsp;In this case, "Ball" and "Bat" branch off of eachother. Where the recursion came in the most was searching for words. A user would give some substring and give all the words that started with that substring. The recursion came with following each branch of the trie, the user gave the starting point and you explored all the words that branched off of that. Explaining this further gets into some computer science jargon most aren't interested in, so if you're somewhat proficient in programming and know C, <a href="https://github.com/daltamur/textPredictionTrie" style="color: white;">here's</a> the link to the project on my Github. What I'm more interested in discussing is how the project can change a CS student's mindset.</p></div>
+    	<div class="blogBodyText"><p>&emsp;&emsp;&emsp;This project requires you to think about how you're going to build a collection of words to return to the user. Recursion with things like BST's keep the programmer thinking about the single instance of something rather than the whole picture it changes. Trie searching is all about building words. When the programmer is able to see the bigger picture and how the recursive case helps you get to the actual value you want, recursion becomes much easier to understand. Recursion is used to do huge tasks, and with this trie, it is easier to see how the recursion is used to build something greater than its individual characters.</p></div>
+
+    </div>
+
+    <script type="text/javascript">
+        var input = document.getElementById("searchBar");
+        input.addEventListener("keyup", function(event) {
+        var inputString=document.getElementById("searchBar").value.toLowerCase();
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+         if(inputString=='contact'||inputString=='phone number'||inputString=='phone'||inputString=='email'||inputString=='about'){
+        window.location.replace("../aboutPage/aboutPage.html");
+            }else if(inputString=='gamer mode'){
+               /*document.querySelector("link[href='sitewideCSS/initial.css']").href = "sitewideCSS/gamerMode.css";*/
+                document.getElementById('curCSS').href=="../sitewideCSS/gamerMode.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/gamerMode.css")
+            }else if(inputString=='gamer mode exit'){
+                 document.getElementById('curCSS').href=="sitewideCSS/initial.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/initial.css")
+            }else if(inputString=='experience'||inputString=='resume'||inputString=='work'||inputString=='education'||inputString=='college'||inputString=='interests'){
+        window.location.replace("../resume/index.html");
+            }else if(inputString=='home'){
+        window.location.replace("../index.html");
+            }else if(inputString=='blog'||inputString=='articles'||inputString=='writeups'||inputString=='opinions'){
+        window.location.replace("index.html");
+            }
+        }
+    });
+    </script>
+</body>
+</html>

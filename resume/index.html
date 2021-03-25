@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	<link rel="stylesheet" id="curCSS" href="../sitewideCSS/initial.css">
+	<link rel="icon" href="../siteWideCSS/favicon.png"> 
+	<style type="text/css">
+		.resumeBody{
+			margin: 5px 25px 0 0;  
+    		margin-left: 25px;
+			font-size: 125%;
+			color: white;
+			background-color: rgba(0,0,0, 0.4);
+			overflow: auto;
+		}
+
+		.resumeBody h1{
+			margin-left: 25px;
+		}
+
+		.resumeBody h2{
+			margin-left: 100px;
+		}
+
+		.resumeBody h3{
+			margin-left: 30px;
+			margin-right: 500px;
+			font-weight: normal;
+		}
+
+		.resumePic{
+			float: right;
+		}
+
+		.resumePic img{
+			max-height: 500px;
+			max-width: 500px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	 <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Resume</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../aboutPage/aboutPage.html">About</a>
+        <input id="searchBar" type="text" placeholder="Search...">
+    </div>
+
+    <div class="resumeBody">
+    	<h1>Dominic Altamura</h1>
+    	<hr>
+    	<div class="resumePic"><img src="headshot.jpg"/></div>
+    	<h2>Education</h2>
+    	<ul>
+    		<li>SUNY Oswego: 2019-Present<ul><li> Current cumulative major (Computer Science) GPA: 4.0</li>
+    		<li>Cumulative minor (Logic) GPA: 4.0</li></ul></li>
+    	</ul>
+    	<h2>Interests</h2>
+    	<ul>
+    		<li>Comedy</li>
+    		<li>Natural Language Processing</li>
+    		<li>Machine Learning</li>
+    		<li>Image Recognition Algorithms</li>
+    		<li>Network & Graph Theory</li>
+    	</ul>
+    	<h2>Languages</h2>
+    	<h3>Proficient in: </h3>
+    	<ul>
+    		<li>Java</li>
+    		<li>C</li>
+    		<li>C#</li>
+    		<li>Python</li>
+    	</ul>
+    	<h3>Improving in:</h3>
+    	<ul>
+    		<li>Scala</li>
+    		<li>Clojure</li>
+    		<li>Javascript</li>
+    		<li>Ruby</li>
+    		<li>PHP</li>
+    	</ul>
+    	<h2>Projects & Work Experience</h2>
+    	<h3>Check my about page to see write ups about my work on Github. I also plan to work with Dan Schlegel over the summer on researching Natural Language Processing</h3>
+    	</div>
+
+    <script type="text/javascript">
+        var input = document.getElementById("searchBar");
+        input.addEventListener("keyup", function(event) {
+        var inputString=document.getElementById("searchBar").value.toLowerCase();
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+         if(inputString=='contact'||inputString=='phone number'||inputString=='phone'||inputString=='email'||inputString=='about'){
+        window.location.replace("../aboutPage/aboutPage.html");
+            }else if(inputString=='gamer mode'){
+               /*document.querySelector("link[href='sitewideCSS/initial.css']").href = "sitewideCSS/gamerMode.css";*/
+                document.getElementById('curCSS').href=="../sitewideCSS/gamerMode.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/gamerMode.css")
+            }else if(inputString=='gamer mode exit'){
+                 document.getElementById('curCSS').href=="sitewideCSS/initial.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/initial.css")
+            }else if(inputString=='experience'||inputString=='resume'||inputString=='work'||inputString=='education'||inputString=='college'||inputString=='interests'){
+        window.location.replace("../resume/index.html");
+            }else if(inputString=='home'){
+        window.location.replace("../index.html");
+            }else if(inputString=='blog'||inputString=='articles'||inputString=='writeups'||inputString=='opinions'){
+        window.location.replace("index.html");
+            }
+        }
+    });
+    </script>
+</body>
+</html>
