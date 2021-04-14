@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" id="curCSS" href="../sitewideCSS/sitewide.css">
+   <style type="text/css">
+     .list-group-item-dark{
+      background-color: white;
+     }
+
+   </style>
+
+
+	<title>Home</title>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark" style="color: blue">
+  <a class="navbar-brand" href="index.html">Dominic Altamura</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Resume</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../blog/index.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../aboutPage/index.html">About</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+       <li cless="nav-item">
+        <div class="input-group">
+  <input type="search" id="searchBar" class="form-control" placeholder="Search..." aria-label="Search"
+    aria-describedby="search-addon"/>
+          <div class="input-group-append">
+                    <button class="btn btn-secondary" id="buttonPress" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+      </div>
+      </li>   
+    </ul>
+  </div> 
+</nav>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="display-3">Dominic Altamura</h1>
+        <p>I am an up-and-coming software developer with valuable experience in a variety of software development settings. Use the resume menu to see what I bring to the table!</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img src="headshot.jpg" height="200" width="150" class="rounded-circle" style="margin-top: 10px">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-4">
+        
+      </div>
+    </div>
+    <div class="row">
+  <div class="col-sm-4">
+    <div class="list-group" id="list-tab" role="tablist" style="margin-bottom: 15px">
+      <a class="list-group-item list-group-item-action active list-group-item-dark" id="list-home-list" data-toggle="list" href="#list-education" role="tab" aria-controls="Education">Education</a>
+      <a class="list-group-item list-group-item-action list-group-item-dark" id="list-profile-list" data-toggle="list" href="#list-interests" role="tab" aria-controls="Interests">Interests</a>
+      <a class="list-group-item list-group-item-action list-group-item-dark" id="list-messages-list" data-toggle="list" href="#list-languages" role="tab" aria-controls="Languages">Languages</a>
+      <a class="list-group-item list-group-item-action list-group-item-dark" id="list-settings-list" data-toggle="list" href="#list-experience" role="tab" aria-controls="Projects & Work Experience">Projects & Work Experience</a>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-education" role="tabpanel" aria-labelledby="list-education-list">
+        <ul class="list-group">
+  <li class="list-group-item list-group-item-secondary"><p><h1>SUNY Oswego</h1> (2019-2023)</p></li>
+  <li class="list-group-item"><p>Major: Computer Science</p> <p>Major GPA: 4.0</p></li>
+  <li class="list-group-item"><p>Minor: Logic</p> <p>Minor GPA: 4.0</p></li>
+  <li class="list-group-item"><p>Activities & Accomplishments:</p><ul>
+    <li>Performing member & PR representative of the Shaun Cassidy Fan Club Improv Troupe</li> 
+    <li>Member of the SUNY Oswego Computer Science Association</li>
+    <li>Consistently on the SUNY Oswego President's List</li>
+    <li>Recipient of the SUNY Oswego Possibility, Presidential, & Marano Scholarship </li></ul></li>
+        </ul></div>
+      <div class="tab-pane fade" id="list-interests" role="tabpanel" aria-labelledby="list-interests-list">
+        <ul class="list-group">
+  <li class="list-group-item">Comedy</li>
+  <li class="list-group-item">Natural Language Processing</li>
+  <li class="list-group-item">Machine Learning</li>
+  <li class="list-group-item">Image Recognition Algorithms</li>
+  <li class="list-group-item">Network & Graph Theory</li>
+        </ul></div>
+      <div class="tab-pane fade" id="list-languages" role="tabpanel" aria-labelledby="list-languages-list">
+        <ul class="list-group">
+  <li class="list-group-item list-group-item-success"><h1>Proficient in: </h1></li>
+  <li class="list-group-item">Java</li>
+  <li class="list-group-item">C</li>
+  <li class="list-group-item">C#</li>
+  <li class="list-group-item">Python</li>
+  <li class="list-group-item list-group-item-warning"><h1>Improving in: </h1></li>
+  <li class="list-group-item">Scala</li>
+  <li class="list-group-item">Clojure</li>
+  <li class="list-group-item">Javascript</li>
+  <li class="list-group-item">Prolog</li>
+  <li class="list-group-item">Ruby</li>
+  <li class="list-group-item">PHP</li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="list-experience" role="tabpanel" aria-labelledby="list-experience-list">
+        <ul class="list-group">
+  <li class="list-group-item list-group-item-secondary"><h3>I'm always working on stuff, some of the latest projects found on my GitHub are:</h3></li>
+  <li class="list-group-item">A word counting software commission for a professor so he can count the individual word countcontributions of each student on a document</li>
+  <li class="list-group-item">A grammar parsing program based on logic operations</li>
+  <li class="list-group-item">A symbolic simplification & boolean evaluator program</li>
+  <li class="list-group-item">A predictive text program that reads the files of a given directory</li>
+  <li class="list-group-item">An integral approximation calculator</li>
+  <li class="list-group-item">An image segmentation program used for facial recognition</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+ <script type="text/javascript">
+        var input = document.getElementById("searchBar");
+        input.addEventListener("keyup", function(event){
+        var inputString=document.getElementById("searchBar").value.toLowerCase();
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+         if(inputString=='contact'||inputString=='phone number'||inputString=='phone'||inputString=='email'||inputString=='about'){
+        window.location.replace("../aboutPage/index.html");
+            }else if(inputString=='gamer mode'){
+               /*document.querySelector("link[href='sitewideCSS/initial.css']").href = "sitewideCSS/gamerMode.css";*/
+                document.getElementById('curCSS').href=="../sitewideCSS/gamerMode.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/gamerMode.css")
+            }else if(inputString=='gamer mode exit'){
+                 document.getElementById('curCSS').href=="../sitewideCSS/sitewide.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/sitewide.css")
+            }else if(inputString=='experience'||inputString=='resume'||inputString=='work'||inputString=='education'||inputString=='college'||inputString=='interests'){
+        window.location.replace("index.html");
+            }else if(inputString=='home'){
+        window.location.replace("../index.html");
+            }else if(inputString=='blog'||inputString=='articles'||inputString=='writeups'||inputString=='opinions'){
+        window.location.replace("../blog/index.html");
+            }     
+      }
+    });
+
+    //same thing but if they click the search button
+    document.getElementById("buttonPress").addEventListener("click", function(event){
+        var inputString=document.getElementById("searchBar").value.toLowerCase();
+        // Cancel the default action, if needed
+        event.preventDefault();
+         if(inputString=='contact'||inputString=='phone number'||inputString=='phone'||inputString=='email'||inputString=='about'){
+        window.location.replace("../aboutPage/index.html");
+            }else if(inputString=='gamer mode'){
+               /*document.querySelector("link[href='sitewideCSS/initial.css']").href = "sitewideCSS/gamerMode.css";*/
+                document.getElementById('curCSS').href=="../sitewideCSS/gamerMode.css";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/gamerMode.css")
+            }else if(inputString=='gamer mode exit'){
+                 document.getElementById('curCSS').href=="sitewideCSS/sitewide.CSS";
+                document.getElementById('curCSS').setAttribute('href',"../sitewideCSS/sitewide.CSS")
+            }else if(inputString=='experience'||inputString=='resume'||inputString=='work'||inputString=='education'||inputString=='college'||inputString=='interests'){
+        window.location.replace("index.html");
+            }else if(inputString=='home'){
+        window.location.replace("../index.html");
+            }else if(inputString=='blog'||inputString=='articles'||inputString=='writeups'||inputString=='opinions'){
+        window.location.replace("../blog/index.html");
+            }     
+      
+    });
+
+
+
+    </script>
+</body>
+</html>
